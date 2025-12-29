@@ -64,7 +64,7 @@ unidades = sorted(df_daily['Unidade'].unique())
 selected_unit = st.sidebar.selectbox("Selecione a Unidade:", ["TODAS"] + unidades)
 
 # === TÍTULO E ANÁLISE ===
-st.title("📊 Painel Estratégico de Atendimentos")
+st.title("📊 Painel Estratégico de Atendimentos FIM DE ANO")
 st.markdown("---")
 
 # Box de Análise
@@ -139,3 +139,4 @@ with tab2:
 with st.expander("Ver Dados Brutos"):
 
     st.dataframe(df_d_show.pivot_table(index=["Unidade", "Dia_Mes"], columns="Periodo", values="Qtd", fill_value=0))
+
