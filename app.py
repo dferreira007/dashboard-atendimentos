@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 
 # === CONFIGURAÇÃO DA PÁGINA ===
 st.set_page_config(
-    page_title="Dashboard de Atendimentos",
+    page_title="Dashboard de Atendimentos fim de ANO",
     page_icon="📊",
     layout="wide"
 )
@@ -137,4 +137,5 @@ with tab2:
 
 # === DATA TABLE (Opcional) ===
 with st.expander("Ver Dados Brutos"):
+
     st.dataframe(df_d_show.pivot_table(index=["Unidade", "Dia_Mes"], columns="Periodo", values="Qtd", fill_value=0))
